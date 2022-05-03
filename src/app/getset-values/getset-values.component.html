@@ -1,0 +1,16 @@
+<form [formGroup]="formGroup">
+<mat-form-field appearance="outline">
+    <mat-label>Select course</mat-label>
+    <mat-select [formControlName]="controlName">
+      <mat-option *ngFor="let course of groups" [value]="course">
+      {{ course }}
+     </mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
+<button mat-raised-button (click)="getVal()">get val</button>
+<button mat-raised-button (click)="setVal()">set val</button>
+<br>
+<br>
+Get value: {{getvalue}}
+

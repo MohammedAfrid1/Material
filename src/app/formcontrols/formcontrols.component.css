@@ -1,0 +1,19 @@
+.example-form {
+    max-width: 100%;
+    width: 60%;
+  }
+  .centeralign
+  {
+    left      : 50%;
+    top       : 40%;
+    position  : relative;
+    transform : translate(-50%, -50%); 
+  }
+  .example-full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+ 

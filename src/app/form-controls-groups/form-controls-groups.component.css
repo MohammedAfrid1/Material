@@ -1,0 +1,8 @@
+.error{
+    color: red;
+    font-size: 15px;
+  }
+
+  .mat-raised-button {
+    margin-left: 10px;
+}

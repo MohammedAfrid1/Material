@@ -1,0 +1,25 @@
+<!--  Dynamic Form Controls with FormArray -->
+
+<div class="center">
+    <form [formGroup] = "angForm" (ngSubmit)="onFormSubmit()">   
+        <mat-label>First Name: </mat-label>
+        <input matInput  /><br><br>
+
+        <mat-label>Last Name: </mat-label>
+        <input matInput  /><br><br>
+
+      <div formArrayName="hobbies">
+        <div *ngFor="let name of hobbies.controls; index as idx; ">
+            <mat-label>Hobbies: </mat-label>
+          <input mat-input [formControlName]="idx">      
+          <button mat-raised-button type="button"  (click)="addNameField()">Add Your Hobbies</button>
+          <button mat-raised-button type="button" *ngIf="hobbies.length>1" (click)="deleteNameField(idx)" >Delete</button>
+        </div>
+      </div> 
+      <div>
+        <button mat-raised-button type="submit" class="btn btn-primary">Send</button>
+      </div>
+  
+    </form>
+</div>
+

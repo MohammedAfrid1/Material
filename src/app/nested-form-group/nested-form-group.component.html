@@ -1,0 +1,15 @@
+<div class="center">
+<form [formGroup]="myForm">
+    <mat-form-field appearance="fill">
+        <mat-label>Name: </mat-label>
+        <input matInput formControlName="name" type="text">
+    </mat-form-field><br>
+    <mat-form-field appearance="fill">
+        <mat-label>Age: </mat-label>
+        <input matInput formControlName="age" type="number">
+    </mat-form-field>
+
+    <app-child [address]="myForm.controls.address"></app-child>
+</form>
+<br>
+<pre>Form Values: {{myForm.value | json}}</pre></div>

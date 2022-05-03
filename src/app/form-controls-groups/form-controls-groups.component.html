@@ -1,0 +1,37 @@
+<div>
+
+    <input mat-input [formControl]="name" />
+    <mat-label *ngIf="name.invalid" [ngClass]="'error'"> Name is required </mat-label>
+    
+</div>
+<br>
+<!--  The ngClass directive allows you to dynamically set CSS classes on an HTML element  -->
+
+<!------------------------------------------------------------------------------------------>
+
+<!-- Set & Get Default value in FormControl   -->
+<div>
+  <form>
+
+    <input mat-input [formControl]="name1" />
+
+  </form>
+</div> 
+<!------------------------------------------------------------------------------------------>
+<br>
+<!-- Set value in FormControl -->
+<div>
+    <input mat-input [formControl]="name2">
+    <div>
+        <br>
+        <button mat-raised-button (click)="setNameValue()">Set value</button>
+    </div>
+</div>
+<br>
+<!------------------------------------------------------------------------------------------>
+
+<!-- FormControl with FormGroup using FormControlName -->
+
+<!-- Formarray -->
+
+

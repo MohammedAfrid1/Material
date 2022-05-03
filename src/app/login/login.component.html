@@ -1,0 +1,30 @@
+<div class="container-fluid page">
+    <div class="page__box p-3 mt-1">Login</div>
+    <div class="page__content shadow p-3 position-relative">
+    <div class="page__content-data position-absolute text-center">
+
+    <!-- ----------------------------------- -->
+    <div id="center"  fxLayout="row" fxLayoutAlign="center center">
+    
+        <mat-card class="example-card">       
+          <form  #loginform="ngForm"  [formGroup]="myForm"  (ngSubmit)="onSubmit()" novalidate class="example-form">    
+            <mat-card-content>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Enter Email" id="Email" formControlName="Email">
+                <mat-error *ngIf="myError('Email', 'required')">Email is required</mat-error> 
+              </mat-form-field>
+      
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Enter Password" id="Password" formControlName="Password">
+             <mat-error *ngIf="myError('Password', 'required')">Password is required</mat-error> 
+              </mat-form-field>
+            </mat-card-content>
+            <button mat-stroked-button type="submit"  color="accent" class="btn-block">Log in</button>
+          </form>
+          
+        </mat-card>
+      </div>
+    <!-- ----------------------------------= -->
+    </div>
+    </div>
+    </div>
